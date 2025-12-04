@@ -130,12 +130,15 @@ const poems = [
     author: "Mob",
   },
     {
-    title: "14",
+    title: "14. El tiempo que necesites",
     text: [ 
-      "hola mundo",
-      "hola mundo"
+    "Y están en la edad exacta de la desesperación,",
+    "ca'ón. O sea, nunca, nunca me sentí más viejo, más acabado que a los veintitantos,",
+    "ca'ón, ¿sí? Decía yo: Ya valió madre, ya me pasó la vida, no hice nada;",
+    "y por eso estoy aquí para decirles: No, no",
+    "y tienen un chingo de tiempo, güey."
     ],
-    author: "Jaime Sabines",
+    author: "Guillermo del toro",
   },
   {
     title: "No es que muera de amor",
