@@ -39,19 +39,21 @@ const poems = [
     author: "Eisen",
   },
   {
-    title: "4",
+    title: "4. Te matan",
     text: [ 
-      "Can i get your blood tonight"
+      "Te matan y después",
+      "piden perdón al cadáver"
     ],
-    author: "merli",
+    author: "Gloria Fuentes",
   },
   {
-    title: "5. merlin",
+    title: "5. Lo volvería",
     text: [ 
-      "Merlin",
-      "jajaja perdona mientras escribia esto me acorde y me dio risa"
+      "Te confieso que",
+      "Lo volveria a hacer de nuevo, amor",
+      "con lo bueno y con lo malo"
     ],
-    author: "starbucks",
+    author: "Juan Pablo Vega",
   },
   {
     title: "6. Rip PETE",
@@ -105,18 +107,23 @@ const poems = [
     author: "Latin mafia",
   },
     {
-    title: "11",
+    title: "11. Tengo miedo",
     text: [ 
-      "tengo miedo de morir sin haber",
+      "Tengo miedo de morir sin haber",
       "amado bastante"
     ],
     author: "Gloria Fuertes",
   },
     {
-    title: "12",
+    title: "12. Estrellas",
     text: [ 
-      "hola mundo",
-      "hola mundo"
+      "Contigo no necesito",
+      "esconder mi pasión",
+      "por las estrellas.", 
+      "a ti también",
+      "te gustan las ",
+      "cosas que a",
+      "nadie más le interesa."
     ],
     author: "Jaime Sabines",
   },
@@ -141,7 +148,7 @@ const poems = [
     author: "Guillermo del toro",
   },
   {
-    title: "No es que muera de amor",
+    title: "15. No es que muera de amor",
     text: [
       "No es que muera de amor, muero de ti.",
       "Muero de ti, amor, de amor de ti,",
@@ -165,43 +172,36 @@ const poems = [
     ],
     author: "Jaime Sabines",
   },  {
-    title: "16",
+    title: "16. Arcane",
     text: [ 
-      "hola mundo",
-      "hola mundo"
+      "- ¿Alguna vez haz deseado quedarte en un moemnto?",
+      "- A veces para dar un paso hacia delante",
+      "hay que dejar cosas en el pasado",
+      "- ¿Podemos hacer de cuenta que es la primera vez?"
     ],
-    author: "Jaime Sabines",
+    author: "Ekko y Powder",
   },
     {
-    title: "17",
+    title: "17. Estuve pensando",
     text: [ 
-      "hola mundo",
-      "hola mundo"
+      "Estuve pensando que nadie me",
+      "piensa. Que estoy absolutamente",
+      "sola. Que nadie, nadie siente mi",
+      "rostro dentro de si ni mi nombre",
+      "correr por su sangre. Nadie actúa",
+      "invocándome, nadie construye su",
+      "vida incluyéndome. He pensado",
+      "tanto en estas cosas"
     ],
-    author: "Jaime Sabines",
+    author: "Alejandra Pizarnik",
   },
     {
-    title: "18. A una rosa",
+    title: "18. Mi foto fav",
     text: [ 
-      "Rosa divina, que en gentil cultura",
-      "Eres con tu fragante sutileza",
-      "Magisterio purpúreo en la belleza,",
-      "Enseñanza nevada a la hermosura.",
-      " ",
-      "Amago de la humana arquitectura,",
-      "Ejemplo de la vana gentileza,",
-      "En cuyo ser unió naturaleza",
-      "La cuna alegre y triste sepultura.",
-      " ",
-      "¡Cuán altiva en tu pompa, presumida",
-      "soberbia, el riesgo de morir desdeñas,",
-      "y luego desmayada y encogida.",
-      " ",
-      "De tu caduco ser das mustias señas!",
-      "Con que con docta muerte y necia vida,",
-      "Viviendo engañas y muriendo enseñas."
+      "Eres tan bonita",
+      "que eso es lo de menos"
     ],
-    author: "Sor Juana Inés de la Cruz",
+    author: "A.",
   },
     {
     title: "19. La sociedad de los poetas muertos",
