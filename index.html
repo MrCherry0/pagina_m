@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login - Photocards</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Hola mundo</h1>
+<body class="login-page">
+    <div class="login-container">
+        <h1 class="login-title">Ingresa la contraseña</h1>
+        <input 
+            type="password" 
+            id="passwordInput" 
+            maxlength="4" 
+            placeholder="••••"
+            class="password-input"
+        >
+        <button onclick="checkPassword()" class="login-btn">Entrar</button>
+        <p id="errorMessage" class="error-message"></p>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>

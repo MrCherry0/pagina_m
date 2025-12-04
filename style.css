@@ -1,0 +1,692 @@
+/* Paleta de colores */
+:root {
+  --negro: #000000;
+  --blanco: #ffffff;
+  --gris-carbon: #1a1a1a;
+  --gris-suave: #f2f2f2;
+  --gris-medio: #bfbfbf;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: var(--gris-carbon);
+  color: var(--blanco);
+}
+
+/* ===== PÁGINA DE LOGIN ===== */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--negro);
+}
+
+.login-container {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: var(--gris-carbon);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.login-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--blanco);
+}
+
+.password-input {
+  width: 200px;
+  padding: 15px 20px;
+  font-size: 2rem;
+  text-align: center;
+  border: 2px solid var(--gris-medio);
+  border-radius: 10px;
+  background-color: var(--gris-suave);
+  color: var(--negro);
+  letter-spacing: 10px;
+  margin-bottom: 20px;
+}
+
+.password-input:focus {
+  outline: none;
+  border-color: var(--blanco);
+}
+
+.login-btn {
+  padding: 12px 40px;
+  font-size: 1.2rem;
+  background-color: var(--blanco);
+  color: var(--negro);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+
+.login-btn:hover {
+  background-color: var(--gris-medio);
+  transform: scale(1.05);
+}
+
+.error-message {
+  color: #ff4444;
+  margin-top: 15px;
+  font-size: 1rem;
+  display: none;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+.shake {
+  animation: shake 0.3s;
+}
+
+/* ===== PÁGINA HOME ===== */
+.home-page {
+  background-color: var(--negro);
+  min-height: 100vh;
+  padding: 0;
+}
+
+/* Sección hero con imagen de fondo fullscreen */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: var(--blanco);
+}
+
+.hero-title {
+  font-family: "Pacifico", cursive;
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 4vw, 1.8rem);
+  color: var(--gris-suave);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 20px 60px 20px;
+}
+
+/* Tipografía Hello Honey (simulada con Pacifico) */
+.title-bienvenido {
+  font-family: "Pacifico", cursive;
+  font-size: 5rem;
+  color: var(--blanco);
+  margin-bottom: 10px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Tipografía Gotham Bold (simulada con Montserrat) */
+.title-hello {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  color: var(--gris-medio);
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+/* Sans Serif redondeada */
+.subtitle {
+  font-family: "Rounded Mplus 1c", "Arial Rounded MT Bold", sans-serif;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  color: var(--gris-suave);
+  margin-bottom: 50px;
+}
+
+/* Grid de Photocards */
+.photocards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.photocard {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  animation: slideIn 0.5s ease-out backwards;
+}
+
+.photocard:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.photocard:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.photocard:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.photocard:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.photocard:nth-child(n + 5) {
+  animation-delay: 0.5s;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.photocard:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+.photocard-frame {
+  background-color: var(--blanco);
+  padding: 12px 12px 40px 12px;
+  border-radius: 5px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  transform: rotate(-3deg);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.photocard:nth-child(even) .photocard-frame {
+  transform: rotate(3deg);
+}
+
+.photocard-frame:hover {
+  transform: rotate(0deg);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.9);
+}
+
+.photocard-frame img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  border-radius: 3px;
+}
+
+.heart {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 1.2rem;
+  color: #cc0000;
+}
+
+/* Modal para photocard con poema */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.modal-content-wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  max-width: 1100px;
+  animation: zoom 0.4s;
+  width: 100%;
+  margin: auto;
+  padding: 40px 0;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Polaroid en el modal */
+.polaroid-container {
+  flex-shrink: 0;
+  position: sticky;
+  top: 40px;
+}
+
+.polaroid-frame {
+  background-color: var(--blanco);
+  padding: 15px 15px 50px 15px;
+  border-radius: 5px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+  transform: rotate(-5deg);
+  position: relative;
+  width: 350px;
+}
+
+.modal-image {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  border-radius: 3px;
+}
+
+.polaroid-heart {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  color: #cc0000;
+}
+
+/* Contenedor del poema con fondo artístico */
+.poem-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-height: none;
+}
+
+.poem-background {
+  background-color: #e8e5dc;
+  background-blend-mode: overlay;
+  padding: 60px 50px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+  min-width: 450px;
+  min-height: 500px;
+  max-height: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.poem-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(242, 242, 242, 0.9) 0%, rgba(230, 225, 215, 0.85) 100%);
+  border-radius: 10px;
+  z-index: 1;
+}
+
+/* Estilos para los bordes decorativos del poema */
+.poem-border {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.poem-border-top-left {
+  width: 250px;
+  height: 250px;
+  top: -40px;
+  left: -40px;
+  background-image: url("carta_borde1.png");
+  background-position: top left;
+}
+
+.poem-border-bottom-right {
+  width: 250px;
+  height: 250px;
+  bottom: -40px;
+  right: -40px;
+  background-image: url("carta_borde2.png");
+  background-position: bottom right;
+}
+
+.poem-title,
+.poem-text,
+.poem-author {
+  position: relative;
+  z-index: 2;
+}
+
+.poem-title {
+  font-family: "Georgia", serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--gris-carbon);
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+
+.poem-text {
+  font-family: "Georgia", serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #2a2a2a;
+  margin-bottom: 40px;
+  max-width: 100%;
+}
+
+.poem-text p {
+  margin: 8px 0;
+  font-style: italic;
+}
+
+.poem-author {
+  font-family: "Georgia", serif;
+  font-size: 1rem;
+  color: #555;
+  font-style: italic;
+  margin-top: auto;
+}
+
+.close {
+  position: fixed;
+  top: 30px;
+  right: 50px;
+  color: var(--blanco);
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1001;
+}
+
+.close:hover {
+  color: var(--gris-medio);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablets y Pantallas Medianas */
+@media (max-width: 1200px) {
+  .modal-content-wrapper {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .polaroid-container {
+    position: relative;
+    top: auto;
+  }
+
+  .polaroid-frame {
+    transform: rotate(0deg);
+    width: 300px;
+  }
+
+  .modal-image {
+    height: 360px;
+  }
+
+  .poem-background {
+    min-width: 350px;
+    min-height: 400px;
+    padding: 40px 30px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  .photocards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+  }
+
+  .hero-section {
+    height: 60vh;
+  }
+
+  .close {
+    top: 20px;
+    right: 30px;
+    font-size: 35px;
+  }
+
+  .modal-content-wrapper {
+    padding: 60px 0 40px 0;
+  }
+}
+
+/* Optimizado para iPhone y móviles */
+@media (max-width: 768px) {
+  .photocards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .hero-section {
+    height: 50vh;
+    min-height: 400px;
+    margin-bottom: 30px;
+  }
+
+  .photocard-frame img {
+    height: 200px;
+  }
+
+  .home-container {
+    padding: 0 15px 40px 15px;
+  }
+
+  .modal-content-wrapper {
+    padding: 60px 10px 30px 10px;
+  }
+
+  .polaroid-frame {
+    width: 100%;
+    max-width: 280px;
+    padding: 10px 10px 35px 10px;
+  }
+
+  .modal-image {
+    height: 280px;
+  }
+
+  .poem-background {
+    min-width: 100%;
+    max-width: 400px;
+    min-height: auto;
+    padding: 30px 20px;
+  }
+
+  .poem-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .poem-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .poem-author {
+    font-size: 0.9rem;
+  }
+
+  .close {
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+  }
+}
+
+/* Optimizado para iPhone pequeño */
+@media (max-width: 480px) {
+  .photocards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .hero-section {
+    height: 45vh;
+    min-height: 350px;
+    margin-bottom: 25px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .title-hello {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+  }
+
+  .photocard-frame {
+    padding: 8px 8px 30px 8px;
+  }
+
+  .photocard-frame img {
+    height: 160px;
+  }
+
+  .modal {
+    padding: 10px;
+  }
+
+  .modal-content-wrapper {
+    padding: 50px 10px 20px 10px;
+  }
+
+  .polaroid-frame {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .modal-image {
+    height: 240px;
+  }
+
+  .poem-background {
+    padding: 20px 15px;
+    min-height: auto;
+  }
+
+  .poem-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  .poem-text {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+
+  .heart {
+    font-size: 1rem;
+    bottom: 8px;
+    right: 12px;
+  }
+}

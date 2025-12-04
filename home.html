@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Photocards Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="home-page">
+    <!-- Agregada sección hero con imagen de fondo fullscreen -->
+    <section class="hero-section">
+        <div class="hero-background" id="heroBackground"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Feliz cumpleaños merli</h1>
+            <p class="hero-subtitle">Espero te guste</p>
+        </div>
+    </section>
+
+    <div class="home-container">
+        <h2 class="title-hello">Galería de photocards</h2>
+        <p class="subtitle">Cada photocard tiene un poema o frase que me gusta y me recordo a la foto</p>
+        
+        <!-- Grid dinámico que se llena desde JavaScript -->
+        <div class="photocards-grid" id="photocards-grid">
+            <!-- Las photocards se generan dinámicamente desde app.js -->
+        </div>
+    </div>
+
+    <!-- Modal para photocard con poema -->
+    <div id="photocardModal" class="modal" onclick="closePhotocard()">
+        <span class="close">&times;</span>
+        <div class="modal-content-wrapper" onclick="event.stopPropagation()">
+            <div class="polaroid-container">
+                <div class="polaroid-frame">
+                    <img id="modalImage" class="modal-image" alt="Photocard">
+                    <div class="polaroid-heart">❤</div>
+                </div>
+            </div>
+            <div class="poem-container">
+                <div class="poem-background">
+                    <!-- Agregados elementos decorativos para los bordes -->
+                    <div class="poem-border poem-border-top-left"></div>
+                    <div class="poem-border poem-border-bottom-right"></div>
+                    
+                    <h3 class="poem-title" id="poemTitle">Título del poema</h3>
+                    <div class="poem-text" id="poemText">
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <p class="poem-author" id="poemAuthor">Autor desconocido</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
